@@ -44,6 +44,12 @@ update
 	}
 
 	vars.time = (current.timer - vars.start_time) * 50;
+
+	// reset if restarts game
+	if (current.timer < old.timer)
+	{
+		vars.strart_time = 0;
+	}
 }
 
 gameTime
