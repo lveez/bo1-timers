@@ -58,9 +58,9 @@ update
 
 gameTime
 {	
-		if (current.timer - vars.round_start < 0)
-		{
-			return TimeSpan.FromMilliseconds(0);
-		}
-    	return TimeSpan.FromMilliseconds((current.timer - vars.round_start) * 50);
+	if (current.timer - vars.round_start < 0)
+	{
+		return TimeSpan.FromMilliseconds(0);
+	}
+	return TimeSpan.FromMilliseconds((current.timer - vars.round_start) * 50);
 }
