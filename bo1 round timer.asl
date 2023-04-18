@@ -22,10 +22,12 @@ startup
 	vars.loop = 0; // this allows us to check when round changes
 	vars.round_start = 0;
 	timer.CurrentTimingMethod = TimingMethod.GameTime;
+	refreshRate = 20;
 }
 
 start
 {
+	refreshRate = 20;
 	return true;
 }
 

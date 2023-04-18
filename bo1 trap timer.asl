@@ -20,10 +20,12 @@ startup
 {
 	vars.start_time = 0;
 	timer.CurrentTimingMethod = TimingMethod.GameTime;
+	refreshRate = 20;
 }
 
 start
 {
+	refreshRate = 20;
 	return true;
 }
 
