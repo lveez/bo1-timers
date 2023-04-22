@@ -11,23 +11,15 @@ state("BGamerT5")
 	int game_paused : 0x8902B4;
 	byte roundchange : 0x165695D;
 }
-
-init
-{
-	refreshRate = 20;
-}
-
 startup
 {
 	vars.loop = 0; // this allows us to check when round changes
 	vars.round_start = 0;
 	timer.CurrentTimingMethod = TimingMethod.GameTime;
-	refreshRate = 20;
 }
 
 start
 {
-	refreshRate = 20;
 	return true;
 }
 
@@ -56,6 +48,11 @@ update
 		vars.loop = 0;
 		vars.round_start = 0;
 	}
+}
+
+isLoading
+{
+	return true;
 }
 
 gameTime

@@ -10,22 +10,19 @@ state("BGamerT5")
 	int game_paused : 0x8902B4;
 }
 
-init
-{
-	refreshRate = 20;
-}
-
-
 startup
 {
     timer.CurrentTimingMethod = TimingMethod.GameTime;
-    refreshRate = 20;
 }
 
 start
 {
-    refreshRate = 20;
 	return true;
+}
+
+isLoading
+{
+    return true;
 }
 
 gameTime
